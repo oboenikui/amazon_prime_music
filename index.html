@@ -36,7 +36,7 @@ function handleFileSelect(evt) {
     items[0].getAsString(s=>{
         list.innerHTML = "";
         let tracks = JSON.parse(s);
-        document.getElementById("share_text").value = s//JSON.stringify(tracks.map(el => {el.libraryId = ""; el.uniqueId = el.asin; return el}));
+        //document.getElementById("share_text").value = s//JSON.stringify(tracks.map(el => {el.libraryId = ""; el.uniqueId = el.asin; return el}));
         tracks.forEach(track => {
             list.innerHTML += `<li><a href="https://www.amazon.co.jp/dp/${encodeURIComponent(track.asin)}" target="_block">https://www.amazon.co.jp/dp/${encodeURIComponent(track.asin)}</a></li>`
         })
